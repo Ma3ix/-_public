@@ -1,0 +1,110 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab01_04{
+    class Lab01_04    {
+        static void Main(string[] args)
+        {
+            
+    int XonTask1;
+    int rezult_1;
+    int rezult_2;
+    int final_rezult;
+            Console.WriteLine("Дано число x. Вычислите число x^6 при помощи трех операций умножения.");
+    Console.WriteLine("введите x");
+    XonTask1 = Convert.ToInt32(Console.ReadLine());
+    rezult_1 = XonTask1 * XonTask1;  //X^2
+    Console.Write("x^2 = ");
+    Console.WriteLine(rezult_1); //выводим первую операцию
+
+    rezult_2 = rezult_1 * rezult_1; // x^4
+    Console.Write("x^4 = ");
+    Console.WriteLine(rezult_2);
+
+    final_rezult = rezult_2 * rezult_1; // X^6
+    Console.WriteLine("(конечный результат!!!)");
+    Console.Write("x^6 = ");
+    Console.WriteLine(final_rezult);
+    Console.WriteLine("Продолжим? y/n?");
+    Console.ReadKey();
+            int XonTask2;
+            int x_1;
+            int x_2;
+            int x_3;
+            int summa;
+            Console.WriteLine();
+            Console.WriteLine("Дано трехзначное число. Найдите сумму его цифр.");
+            Console.WriteLine("введите трехзначное число");
+            XonTask2 = Convert.ToInt32(Console.ReadLine());
+            x_1 = XonTask2 / 100;
+            x_2 = ((XonTask2 / 10) % 10);
+            x_3 = (((XonTask2*10)/10) % 10);
+            summa = x_1 + x_2 + x_3;
+            Console.Write("сумма цифр этого числа равна ");
+            Console.WriteLine(summa);
+            Console.WriteLine("Продолжим? y/n?");
+            Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Приложение вычисляет значение x и выводит его на консоль, где m, n, p, a, b, c, d, e – это имена изменяемых параметров(вводятся пользователем с консоли).Вычисление выражения построить так, чтобы минимизировать время его вычисления.");
+            Double XonTask3;
+            int schetchik;
+            // переменные в выражении вводимые с клавиатуры
+
+            Double a;
+            Double b;
+            Double c;
+            Double d;
+            Double e;
+            Double m;
+            Double p;
+            Double n;
+
+            // нужны для функции math
+            
+            Double OneOnN;
+            Double Two;
+            
+
+            //обнуление счетчика не считается временем вычисления формулы
+            schetchik = 0;
+
+            //приступаю к вычислениям
+            Console.WriteLine("Введите данные:");
+            Console.Write("A = "); a =double.Parse(Console.ReadLine());  schetchik = schetchik + 1;
+            Console.Write("B = "); b = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("C = "); c = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("D = "); d = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("E = "); e = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("M = "); m = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("N = "); n = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+            Console.Write("P = "); p = double.Parse(Console.ReadLine()); schetchik = schetchik + 1;
+
+            Console.WriteLine("Приступаю к вычислениям...");
+            //считаем Числитель
+            Two = 2;                                       schetchik = schetchik + 1;
+            Double TWF = 2.5;                              schetchik = schetchik + 1;
+            OneOnN = 1 / n;                                schetchik = schetchik + 7 + 1;
+         Double Chislitel = ((12.3 + 52.7 * (Math.Pow(a, n) / Math.Pow(b, TWF))) * (12.3 - 52.7 * (Math.Pow(a, n) / Math.Pow(b, TWF)))) * Math.Pow(Two,OneOnN); schetchik = schetchik + 105;
+
+            // считаем знаменатель
+            
+            Double Znamenatel = (Math.Log(Math.Sqrt(132.5+Math.Sin(Math.Pow(e,m)))))-(Math.Cos(c*(Math.Pow(d,p)))); schetchik = schetchik + 89;
+            XonTask3 = Chislitel / Znamenatel;             schetchik = schetchik + 7 + 1;
+
+            Console.Write("Результат вычислений =  "); Console.WriteLine(XonTask3);
+            Console.Write("Время выполнения вычислений  "); Console.Write(schetchik); Console.WriteLine(" условных единиц");
+
+            double KiloMetrsToMars = 58000000;
+            double ArshinsToMars;
+            Console.Write (" Минимальное расстояние между Землей и Марсом 27.07.2018 = "); Console.Write(KiloMetrsToMars);
+            Console.WriteLine(" км"); Console.WriteLine("Источник: Интернет");
+            Console.WriteLine("Приступаю к вычислениям..."); Console.ReadKey();
+            ArshinsToMars = KiloMetrsToMars * 0.0007112;
+            Console.Write(" Минимальное расстояние между Землей и Марсом 27.07.2018 = "); Console.Write(ArshinsToMars);
+            Console.WriteLine(" аршин"); Console.WriteLine("Источник: Интернет"); Console.ReadKey();
+        }
+}
+   }
