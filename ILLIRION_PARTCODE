@@ -1,0 +1,13 @@
+static void Main()
+        {
+            byte i0;
+            Console.WriteLine("Нажимай на указанные клавиши чтобы выполнить что-либо");
+            Console.WriteLine("Готов?");
+            Console.WriteLine("1 - Начать игру; 2 - Справка по квесту");
+            i0 = byte.Parse(Console.ReadLine());
+            switch (i0)
+            {
+                case 1: GamePage1(); break;
+                case 2: FAQ(); break;
+                default: Console.Clear(); Main(); break;
+            }
